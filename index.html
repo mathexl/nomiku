@@ -1,4 +1,8 @@
 <head>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
 <style>
 @font-face {
   font-family: 'Carosello-Regular';
@@ -127,12 +131,17 @@ section[name="main"] > #previewimage{
   position: fixed;
   z-index:14;
   box-sizing: border-box;
+  overflow: hidden;
+}
+
+section[name="main"] > #previewimage > video{
+  display: none;
 }
 
 section[name="mobile"] > #top > #previewimage{
   background-color:white;
   width:84%;
-  height:50vw;
+  height:47vw;
   margin-left:8%;
   background-size:cover;
   background-repeat:no-repeat;
@@ -142,6 +151,14 @@ section[name="mobile"] > #top > #previewimage{
   border:2px white solid;
   position: relative;
   box-sizing: border-box;
+  overflow: hidden;
+}
+
+section[name="mobile"] > #top > #previewimage > video{
+  position: absolute;
+  top: 0px;
+  display:none;
+  left: 0px;
 }
 
 
@@ -605,7 +622,10 @@ section[name="main"] > #right > #zones > .bars > .bar ~ .bar ~ .bar ~ .bar ~ .ba
     </div>
     <div id="top">
       <div id="previewimage" style="background-image:url('./images/previewimage.png')">
-        <img src="./images/play.png" class="play">
+        <img src="./images/play.png" class="play" id="playmobile">
+        <video width="100%" id="videomobile">
+          <source src="./harry.mp4" type="video/mp4">
+        </video>
       </div>
       <img src="./images/badge.png" id="badge">
       <h1>Tap and Eat delicious personalized meals!</h1>
@@ -670,7 +690,10 @@ section[name="main"] > #right > #zones > .bars > .bar ~ .bar ~ .bar ~ .bar ~ .ba
       The first 1,000 orders get the machine for $49, for a savings of $200! X are left so order today!
     </div>
     <div id="previewimage" style="background-image:url('./images/previewimage.png')">
-      <img src="./images/play.png" class="play">
+      <img src="./images/play.png" class="play" id="play">
+      <video width="100%" id="video">
+        <source src="./harry.mp4" type="video/mp4">
+      </video>
     </div>
     <div id="left">
       <img src="./images/badge.png" id="badge">
@@ -737,4 +760,18 @@ section[name="main"] > #right > #zones > .bars > .bar ~ .bar ~ .bar ~ .bar ~ .ba
       </div>
     </div>
   </section>
+  <script>
+  $("#play").click(function(){
+    $("#video").show();
+    $("#video").get(0).play();
+    $(this).hide();
+  });
+
+  $("#playmobile").click(function(){
+    $("#videomobile").show();
+    $("#videomobile").get(0).play();
+    $(this).hide();
+  });
+
+  </script>
 </body>
