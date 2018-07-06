@@ -33,6 +33,23 @@ section[name="main"]{
   display: inline-block;
 }
 
+section[name="mobile"]{
+  display:none;
+  width: 100%;
+  min-height:100vh;
+}
+
+@media screen and (max-width: 800px){
+  section[name="main"]{
+    display:none;
+  }
+
+  section[name="mobile"]{
+    display:inline-block;
+  }
+
+}
+
 section[name="main"] > #press{
   width:100%;
   height:50px;
@@ -63,9 +80,39 @@ section[name="main"] > #infoblock{
   border:3px white solid;
   bottom:50px;
   color:white;
-  background-color:#52AEFB;
+  background-color:#0083DB;
 
 }
+
+
+
+section[name="mobile"] > #infoblock{
+  width:100%;
+  position: relative;
+  height:auto;
+  padding:8px 20px;
+  box-sizing: border-box;
+  font-family: "Open Sans", Sans;
+  text-align: center;
+  font-weight:600;
+  font-size:13px;
+  display:inline-block;
+  border-bottom:4px white solid;
+  color:white;
+  background-color:#0083DB;
+}
+
+
+section[name="mobile"] > #top{
+  width:100%;
+  display: inline-block;
+  background-color:#F9F2C7;
+  position: relative;
+  padding-bottom:30px;
+  z-index:2;
+  border-bottom:4px white solid;
+}
+
 
 section[name="main"] > #previewimage{
   background-color:white;
@@ -82,12 +129,201 @@ section[name="main"] > #previewimage{
   box-sizing: border-box;
 }
 
+section[name="mobile"] > #top > #previewimage{
+  background-color:white;
+  width:84%;
+  height:50vw;
+  margin-left:8%;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position: center;
+  margin-top:10vw;
+
+  border:2px white solid;
+  position: relative;
+  box-sizing: border-box;
+}
+
+
+
+
 section[name="main"] > #previewimage > .play{
   width:120px;
   height:120px;
   position: absolute;
   top:calc(27.5vh - 60px);
   left:calc(50% - 60px);
+}
+
+section[name="mobile"] > #top > #previewimage > .play{
+  width:70px;
+  height:70px;
+  position: relative;
+  margin-top:calc(25vw - 35px);
+  margin-left:calc(50% - 35px);
+}
+
+
+section[name="mobile"] > #top > #badge{
+  width:25vw;
+  position: absolute;
+  top:2vw;
+  z-index:90;
+  left:2vw;
+}
+
+section[name="mobile"] > #top > h1{
+  font-size:28px;
+  margin-bottom:5px;
+  margin-top:14px;
+  font-family: 'Carosello-Regular';
+  color:#F36E7B;
+  font-weight: 400;
+  width:84%;
+  margin-left:8%;
+  text-align: center;
+}
+
+section[name="mobile"] > #top > p{
+  font-size:14px;
+  margin-top:1px;
+  font-family: 'Cooper Std Black';
+  color:#0083DB;
+  width:84%;
+  margin-left:8%;
+  text-align: center;
+  margin-bottom:14px;
+}
+
+section[name="mobile"] > #top > #orderbutton{
+  width:50vw;
+  position: absolute;
+
+  cursor: pointer;
+  left:25vw;
+  bottom:-25px;
+}
+
+section[name="mobile"] > #press {
+  width:100%;
+  font-family: 'Cooper Std Black';
+  height: 100vh;
+  position: relative;
+  display:inline-block;
+  background-image:url('./images/pressmobile.png');
+  background-color:#B8E2E8;
+  border-top:4px white solid;
+  background-position: center;
+  background-size:80%;
+  height:40vh;
+  background-repeat: no-repeat;
+}
+
+section[name="mobile"] > #zones {
+  width:100%;
+  font-family: 'Cooper Std Black';
+  height: 100vh;
+  position: relative;
+  display:inline-block;
+  background-color:#FFE3C5;
+  z-index:1;
+}
+
+section[name="mobile"] > #zones > #title{
+    font-family: 'Carosello-Regular';
+    font-size:28px;
+    width:100%;
+    text-align: center;
+    background-image:url('./images/underline.png');
+    background-size:50%;
+    margin-top:7vh;
+    background-position: center 34px;
+    background-repeat: no-repeat;
+    height:80px;
+    overflow: visible;
+    color:#0083DB;
+}
+
+section[name="mobile"] > #zones > #title > span{
+  color: #F36E7B;
+}
+
+
+section[name="mobile"] > #zones > #nation{
+  width:90%;
+  margin-left:5%;
+  position: relative;
+}
+
+section[name="mobile"] > #zones > #unlock{
+  width:30%;
+  top:18vh;
+  left:10%;
+  position: absolute;
+}
+
+section[name="mobile"] > #zones > .bars{
+  position: relative;
+  width:80%;
+  margin-left:10%;
+  margin-right:10%;
+  display: inline-block;
+  margin-top:-24px;
+  background-color:transparent;
+}
+
+section[name="mobile"] > #zones > .bars > .title{
+  width:100%;
+  height:30px;
+  display:inline-block;
+  font-size:15px;
+  margin-bottom:-3px;
+  margin-top:1px;
+}
+
+section[name="mobile"] > #zones > .bars > .title > .left{
+  float:left;
+}
+
+section[name="mobile"] > #zones > .bars > .title > .right{
+  float:right;
+  color:#bbb;
+}
+
+section[name="mobile"] > #zones > .bars > .bar {
+  width: 100%;
+  height:13px;
+  margin-top:-6px;
+  background-color:white;
+  margin-bottom:15px;
+  border-radius:7px;
+  overflow:none;
+}
+
+section[name="mobile"] > #zones > .bars > .bar > .inner{
+  width:50%;
+  height:13px;
+  background-color:#52C0DD;
+  border-radius:9px;
+}
+
+section[name="mobile"] > #zones > .bars > .bar ~ .bar > .inner{
+  background-color:#FFDA24;
+}
+
+
+section[name="mobile"] > #zones > .bars > .bar ~ .bar ~ .bar> .inner{
+  background-color:#83AD68;
+}
+
+
+section[name="mobile"] > #zones > .bars > .bar ~ .bar ~ .bar ~ .bar> .inner{
+  background-color:#EF5E70;
+}
+
+
+section[name="mobile"] > #zones > .bars > .bar ~ .bar ~ .bar ~ .bar ~ .bar> .inner{
+  background-color:#EAA77A;
 }
 
 section[name="main"] > #press > img{
@@ -368,6 +604,69 @@ section[name="main"] > #right > #zones > .bars > .bar ~ .bar ~ .bar ~ .bar ~ .ba
 </style>
 </head>
 <body>
+  <section name="mobile">
+    <div id="infoblock">
+      The first 1,000 orders get the machine for $49, for a savings of $200! X are left so order today!
+    </div>
+    <div id="top">
+      <div id="previewimage" style="background-image:url('./images/previewimage.png')">
+        <img src="./images/play.png" class="play">
+      </div>
+      <img src="./images/badge.png" id="badge">
+      <h1>Tap and Eat delicious personalized meals!</h1>
+      <p>DONE IN 30 MINUTES!</p>
+      <img id="orderbutton" src="./images/order.png">
+
+    </div>
+    <div id="zones">
+      <div id="title"><span>41</span> days left</div>
+
+      <img src="./images/nation.png" id="nation">
+      <img src="./images/unlockTitle.png" id="unlock">
+      <div class="bars">
+        <div class="title">
+          <div class="left">East</div>
+          <div class="right">64% Funded</div>
+        </div>
+        <div class="bar">
+          <div class="inner"></div>
+        </div>
+
+        <div class="title">
+          <div class="left">Midwest</div>
+          <div class="right">64% Funded</div>
+        </div>
+        <div class="bar">
+          <div class="inner"></div>
+        </div>
+
+        <div class="title">
+          <div class="left">South</div>
+          <div class="right">64% Funded</div>
+        </div>
+        <div class="bar">
+          <div class="inner"></div>
+        </div>
+
+        <div class="title">
+          <div class="left">Mountain</div>
+          <div class="right">64% Funded</div>
+        </div>
+        <div class="bar">
+          <div class="inner"></div>
+        </div>
+
+        <div class="title">
+          <div class="left">Florida</div>
+          <div class="right">64% Funded</div>
+        </div>
+        <div class="bar">
+          <div class="inner"></div>
+        </div>
+      </div>
+    </div>
+    <div id="press"></div>
+  </section>
   <section name="main">
     <div id="press">
       <img src="./images/newsStrip.png">
