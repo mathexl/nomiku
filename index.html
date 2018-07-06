@@ -1,0 +1,434 @@
+<head>
+<style>
+@font-face {
+  font-family: 'Carosello-Regular';
+  src: URL('./vendor/Carosello-Regular.ttf') format('ttf');
+  src: URL('./vendor/Carosello-Regular.otf') format('otf');
+
+}
+
+@font-face {
+  font-family: 'Cooper Std Black';
+  src: URL('./vendor/Cooper Std Black.ttf') format('ttf');
+  src: URL('./vendor/CooperBlackStd.otf') format('otf');
+  src: URL('./vendor/cooper-black-webfont.woff') format('woff');
+
+
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+body {
+  padding:0px;
+  margin:0px;
+}
+
+section[name="main"]{
+  width: 100%;
+  height:100vh;
+  display: inline-block;
+}
+
+section[name="main"] > #press{
+  width:100%;
+  height:50px;
+  background-color:white;
+  z-index:9;
+  display: inline-block;
+  position: fixed;
+  padding-left:20%;
+  text-align:center;
+  bottom:0px;
+  left:0px;
+  box-sizing: border-box;
+}
+
+section[name="main"] > #infoblock{
+  width:60%;
+  position: fixed;
+  left:25%;
+  height:30px;
+  z-index:10;
+  padding:3px;
+  box-sizing: border-box;
+  font-family: "Open Sans", Sans;
+  text-align: center;
+  font-weight:600;
+  font-size:13px;
+  display:inline-block;
+  border:3px white solid;
+  bottom:50px;
+  color:white;
+  background-color:#52AEFB;
+
+}
+
+section[name="main"] > #previewimage{
+  background-color:white;
+  width:54%;
+  height:55vh;
+  top:17vh;
+  left:12%;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position: center;
+  border:5px white solid;
+  position: fixed;
+  z-index:14;
+  box-sizing: border-box;
+}
+
+section[name="main"] > #previewimage > .play{
+  width:120px;
+  height:120px;
+  position: absolute;
+  top:calc(27.5vh - 60px);
+  left:calc(50% - 60px);
+}
+
+section[name="main"] > #press > img{
+  height:28px;
+  margin-top:11px;
+}
+
+section[name="main"] > #left {
+  width: 30%;
+  height:100vh;
+  display:inline-block;
+  position: relative;
+  float:left;
+  overflow: hidden;
+  background-color:#B8E2E8;
+}
+
+section[name="main"] > #left > #badge{
+  width:15vw;
+  position: absolute;
+  top:2vw;
+  z-index:90;
+  left:2vw;
+}
+
+
+section[name="main"] > #left > #plate{
+  width:25vw;
+  position: absolute;
+  bottom:-4vw;
+  left:-4vw;
+  z-index:18;
+  -webkit-animation:spin 14s linear infinite;
+    -moz-animation:spin 14s linear infinite;
+    animation:spin 14s linear infinite;
+}
+
+section[name="main"] > #left > #steak{
+  width:16vw;
+  position: absolute;
+  bottom:2vw;
+  left:0vw;
+  z-index:19;
+  -webkit-animation:spin 14s linear infinite;
+    -moz-animation:spin 14s linear infinite;
+    animation:spin 14s linear infinite;
+}
+
+section[name="main"] > #left > #nomikutop{
+  position: absolute;
+  width:80px;
+  bottom:82vh;
+  left:20vw;
+}
+
+section[name="main"] > #left > #nomikuhandle{
+  position: absolute;
+  width:40px;
+  bottom:calc(82vh - 126px);
+  left:calc(20vw + 20px);
+  z-index:40;
+}
+
+section[name="main"] > #left > #card{
+  position: absolute;
+  width:200px;
+  top:5vh;
+  left:calc(9vw);
+  z-index:41;
+  -webkit-animation:jerk 2s ease infinite;
+    -moz-animation:jerk 2s ease infinite;
+    animation:jerk 2s ease infinite;
+
+}
+
+@-moz-keyframes jerk { 0% { left: 5vw; } 50% { left:9vw; } 100% { left: 5vw; } }
+@-webkit-keyframes jerk { 0% { left: 5vw; } 50% { left:9vw; } 100% { left: 5vw; } }
+@keyframes jerk { 0% { left: 5vw; } 50% { left:9vw; } 100% { left: 5vw; } }
+
+
+
+section[name="main"] > #right {
+  width: 70%;
+  height:100vh;
+  display:inline-block;
+  float:left;
+  position: relative;
+  background-color:#F9F2C7;
+
+}
+
+
+
+
+section[name="main"] > #right > .maininformation {
+  position: absolute;
+  top:16px;
+  left:40px;
+  display:inline-block;
+  width:50%;
+  height:100px;
+}
+
+section[name="main"] > #right > .maininformation > h1{
+  font-size:28px;
+  margin-bottom:5px;
+  margin-top:14px;
+  font-family: 'Carosello-Regular';
+  color:#F36E7B;
+  font-weight: 400;
+}
+
+
+section[name="main"] > #right > .maininformation > p {
+  font-size:14px;
+  margin-top:1px;
+  font-family: 'Cooper Std Black';
+  color:#0083DB;
+}
+
+
+
+
+section[name="main"] > #right > #zones {
+  width:34%;
+  right:8%;
+  top:17vh;
+  position: absolute;
+  font-family: 'Cooper Std Black';
+  height: 55vh;
+  background-color:#FFE3C5;
+}
+
+section[name="main"] > #right > #zones > #title{
+    font-family: 'Carosello-Regular';
+    font-size:28px;
+    width:100%;
+    text-align: center;
+    background-image:url('./images/underline.png');
+    background-size:50%;
+    margin-top:7vh;
+    background-position: center 34px;
+    background-repeat: no-repeat;
+    height:80px;
+    overflow: visible;
+    color:#0083DB;
+}
+
+section[name="main"] > #right > #zones > #title > span{
+  color: #F36E7B;
+}
+
+section[name="main"] > #right > #orderbutton{
+  height:50px;
+  position: absolute;
+  bottom:17vh;
+  cursor: pointer;
+  left:23vh;
+
+}
+
+section[name="main"] > #right > #zones > #nation{
+  width:90%;
+  top:-20vh;
+  left:5%;
+  position: absolute;
+}
+
+
+@media screen and (max-width:1230px){
+  section[name="main"] > #right > .maininformation > h1{
+    font-size:26px;
+  }
+
+  section[name="main"] > #right > .maininformation > p {
+    font-size:14px;
+  }
+
+  section[name="main"] > #right > #zones > #nation{
+    top:-18vh;
+  }
+}
+
+
+@media screen and (max-width:1130px){
+  section[name="main"] > #right > .maininformation > h1{
+    font-size:23px;
+  }
+
+  section[name="main"] > #right > .maininformation > p {
+    font-size:14px;
+  }
+
+  section[name="main"] > #right > #zones > #nation{
+    top:-16vh;
+  }
+}
+
+section[name="main"] > #right > #zones > #unlock{
+  width:70%;
+  bottom:-14vh;
+  left:15%;
+  position: absolute;
+}
+
+section[name="main"] > #right > #zones > .bars{
+  position: absolute;
+  top:17vh;
+  width:90%;
+  margin-left:5%;
+  margin-right:5%;
+  display: inline-block;
+  background-color:transparent;
+}
+
+section[name="main"] > #right > #zones > .bars > .title{
+  width:100%;
+  height:30px;
+  display:inline-block;
+  font-size:15px;
+  margin-bottom:-8px;
+  margin-top:1px;
+}
+
+section[name="main"] > #right > #zones > .bars > .title > .left{
+  float:left;
+}
+
+section[name="main"] > #right > #zones > .bars > .title > .right{
+  float:right;
+  color:#bbb;
+}
+
+section[name="main"] > #right > #zones > .bars > .bar {
+  width: 100%;
+  height:13px;
+  margin-top:-6px;
+  background-color:white;
+  margin-bottom:10px;
+  border-radius:7px;
+  overflow:none;
+}
+
+section[name="main"] > #right > #zones > .bars > .bar > .inner{
+  width:50%;
+  height:13px;
+  background-color:#52C0DD;
+  border-radius:9px;
+}
+
+section[name="main"] > #right > #zones > .bars > .bar ~ .bar > .inner{
+  background-color:#FFDA24;
+}
+
+
+section[name="main"] > #right > #zones > .bars > .bar ~ .bar ~ .bar> .inner{
+  background-color:#83AD68;
+}
+
+
+section[name="main"] > #right > #zones > .bars > .bar ~ .bar ~ .bar ~ .bar> .inner{
+  background-color:#EF5E70;
+}
+
+
+section[name="main"] > #right > #zones > .bars > .bar ~ .bar ~ .bar ~ .bar ~ .bar> .inner{
+  background-color:#EAA77A;
+}
+</style>
+</head>
+<body>
+  <section name="main">
+    <div id="press">
+      <img src="./images/newsStrip.png">
+    </div>
+    <div id="infoblock">
+      The first 1,000 orders get the machine for $49, for a savings of $200! X are left so order today!
+    </div>
+    <div id="previewimage" style="background-image:url('./images/previewimage.png')">
+      <img src="./images/play.png" class="play">
+    </div>
+    <div id="left">
+      <img src="./images/badge.png" id="badge">
+      <img src="./images/plate.png" id="plate">
+      <img src="./images/steak.png" id="steak">
+      <img src="./images/nomikutop.png" id="nomikutop">
+      <img src="./images/handle.png" id="nomikuhandle">
+      <img src="./images/card.png" id="card">
+
+    </div>
+    <div id="right">
+      <div class="maininformation">
+        <h1>Tap and Eat delicious personalized meals!</h1>
+        <p>DONE IN 30 MINUTES!</p>
+      </div>
+      <img id="orderbutton" src="./images/order.png">
+      <div id="zones">
+        <img src="./images/nation.png" id="nation">
+        <img src="./images/unlock.png" id="unlock">
+        <div id="title"><span>41</span> days left</div>
+        <div class="bars">
+          <div class="title">
+            <div class="left">East</div>
+            <div class="right">64% Funded</div>
+          </div>
+          <div class="bar">
+            <div class="inner"></div>
+          </div>
+
+          <div class="title">
+            <div class="left">Midwest</div>
+            <div class="right">64% Funded</div>
+          </div>
+          <div class="bar">
+            <div class="inner"></div>
+          </div>
+
+          <div class="title">
+            <div class="left">South</div>
+            <div class="right">64% Funded</div>
+          </div>
+          <div class="bar">
+            <div class="inner"></div>
+          </div>
+
+          <div class="title">
+            <div class="left">Mountain</div>
+            <div class="right">64% Funded</div>
+          </div>
+          <div class="bar">
+            <div class="inner"></div>
+          </div>
+
+          <div class="title">
+            <div class="left">Florida</div>
+            <div class="right">64% Funded</div>
+          </div>
+          <div class="bar">
+            <div class="inner"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
