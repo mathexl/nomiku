@@ -105,6 +105,15 @@ section[name="main"] > #left {
   background-color:#B8E2E8;
 }
 
+section[name="main"] > #left > #hiddensquare {
+  width:12vw;
+  height: 14vw;
+  background-color:#B8E2E8;
+  z-index:89;
+  position: absolute;
+
+}
+
 section[name="main"] > #left > #badge{
   width:15vw;
   position: absolute;
@@ -155,7 +164,7 @@ section[name="main"] > #left > #card{
   position: absolute;
   width:200px;
   top:5vh;
-  left:calc(9vw);
+  left:3vw;
   z-index:41;
   -webkit-animation:jerk 2s ease infinite;
     -moz-animation:jerk 2s ease infinite;
@@ -163,9 +172,9 @@ section[name="main"] > #left > #card{
 
 }
 
-@-moz-keyframes jerk { 0% { left: 5vw; } 50% { left:9vw; } 100% { left: 5vw; } }
-@-webkit-keyframes jerk { 0% { left: 5vw; } 50% { left:9vw; } 100% { left: 5vw; } }
-@keyframes jerk { 0% { left: 5vw; } 50% { left:9vw; } 100% { left: 5vw; } }
+@-moz-keyframes jerk { 0% { left: 3vw; } 50% { left:9vw; } 100% { left: 3vw; } }
+@-webkit-keyframes jerk { 0% { left: 3vw; } 50% { left:9vw; } 100% { left: 3vw; } }
+@keyframes jerk { 0% { left: 3vw; } 50% { left:9vw; } 100% { left: 3vw; } }
 
 
 
@@ -371,6 +380,8 @@ section[name="main"] > #right > #zones > .bars > .bar ~ .bar ~ .bar ~ .bar ~ .ba
     </div>
     <div id="left">
       <img src="./images/badge.png" id="badge">
+      <div id="hiddensquare"></div>
+
       <img src="./images/plate.png" id="plate">
       <img src="./images/steak.png" id="steak">
       <img src="./images/nomikuTop.png" id="nomikutop">
